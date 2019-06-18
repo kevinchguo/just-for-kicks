@@ -11,10 +11,10 @@ function seeDetails() {
 
 let getName1 = document.querySelector("#name1");
 console.log(getName1)
-getName1.addEventListener("mouseover", showHide);
+getName1.addEventListener("mouseover", showHideName1);
 let getDesc = document.querySelector("#descrip1")
 
-function showHide() {
+function showHideName1() {
     getName1.appendChild(getDesc)
     if (getDesc.style.display === "block") {
         getDesc.style.display = "none"
@@ -26,7 +26,21 @@ function showHide() {
 //3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
 //'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
 
+let getName2 = document.querySelector("#name2");
+console.log(getName2)
+getName2.addEventListener("click", showHideName2);
+let divDesc2 = document.createElement("div");
+divDesc2.innerHTML = "The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season."
+getName2.appendChild(divDesc2)
+divDesc2.style.display = "none"
 
+function showHideName2() {
+    if (divDesc2.style.display === "block") {
+        divDesc2.style.display = "none"
+    } else {
+        divDesc2.style.display = "block"
+    }
+}
 
 //You'll need to:
 // create a div element with an id of 'descrip2'
