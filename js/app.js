@@ -64,12 +64,29 @@ for (let i = 0; i < findThumbs.length; i++) {
     findThumbs[i].innerHTML = "0";
     findThumbs[i].addEventListener("click", addThumbUps)
 }
+console.log(findThumbs[0])
 
 function addThumbUps() {
     this.innerHTML++    
 }
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
+
+let findPlus = document.getElementById("increase");
+findPlus.addEventListener("click", increase);
+let findAmt = document.getElementById("price4")
+console.log(findAmt.childNodes)
+console.log(findAmt.childNodes[0].textContent)
+console.log(findAmt.childNodes[1])
+
+console.log(typeof findAmt.childNodes[0].textContent)
+console.log(typeof amt)
+
+function increase() {
+    console.log("hi")
+    let amt = parseInt(findAmt.childNodes[0].textContent);
+    findAmt.childNodes[0].textContent = amt + 100
+}
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
 
