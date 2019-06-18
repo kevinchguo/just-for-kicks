@@ -11,11 +11,11 @@ function seeDetails() {
 
 let getName1 = document.querySelector("#name1");
 console.log(getName1)
-getName1.addEventListener("mouseover", showHideName1);
+getName1.addEventListener("mouseleave", showHideName1);
 let getDesc = document.querySelector("#descrip1")
+getName1.appendChild(getDesc)
 
 function showHideName1() {
-    getName1.appendChild(getDesc)
     if (getDesc.style.display === "block") {
         getDesc.style.display = "none"
     } else {
@@ -25,6 +25,11 @@ function showHideName1() {
 
 //3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
 //'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
+
+//You'll need to:
+// create a div element with an id of 'descrip2'
+//append this element to the div element with the id of 'name2' 
+
 
 let getName2 = document.querySelector("#name2");
 console.log(getName2)
@@ -42,11 +47,27 @@ function showHideName2() {
     }
 }
 
-//You'll need to:
-// create a div element with an id of 'descrip2'
-//append this element to the div element with the id of 'name2' 
-
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
+
+let findThumbs = document.querySelectorAll(".fa-thumbs-up");
+console.log(findThumbs)
+console.log(findThumbs.length)
+// let thumbCounter = document.createElement("div");
+// thumbCounter.textContent = 0;
+// findThumbs.appendChild(thumbCounter)
+
+// let findThumbCounter = document.getElementsByClassName("thumbsUp")
+// console.log(findThumbCounter)
+// console.log("hello")
+
+for (let i = 0; i < findThumbs.length; i++) {
+    findThumbs[i].innerHTML = "0";
+    findThumbs[i].addEventListener("click", addThumbUps)
+}
+
+function addThumbUps() {
+    this.innerHTML++    
+}
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
