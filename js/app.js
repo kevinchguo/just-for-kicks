@@ -90,9 +90,39 @@ function increase() {
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
 
+let findMinus = document.getElementById("decrease")
+console.log(findMinus)
+findMinus.addEventListener("click", decreasePrice);
+let findAirJordanVI = document.getElementById("price5")
+console.log(findAirJordanVI.childNodes[0])
+
+function decreasePrice() {
+    let amt = parseInt(findAirJordanVI.childNodes[0].textContent)
+    findAirJordanVI.childNodes[0].textContent = amt - 100
+}
+
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
 
+let findAJXI = document.querySelectorAll("img")
+console.log(findAJXI[6])
+findAJXI[6].addEventListener("mouseover", changePic);
+
+function changePic() {
+    if (findAJXI) {
+        findAJXI[6].src = "https://stockx-360.imgix.net/Air-Jordan-11-Retro-Concord-2018/Images/Air-Jordan-11-Retro-Concord-2018/Lv2/img01.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1551743170"
+    }
+}
+
+findAJXI[6].addEventListener("mouseleave", changePicBack);
+
+function changePicBack() {
+    if (findAJXI) {
+        findAJXI[6].src = "https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg"
+    }
+}
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+
+
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
