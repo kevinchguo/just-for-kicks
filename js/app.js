@@ -138,7 +138,10 @@ findAJXII[7].addEventListener("click", enlargePic);
 // console.log(findAJXII[7].style.display.textContent)
 
 function enlargePic() {
-    while(true) {
+    console.log("hi")
+    if (findAJXII) {
+        findAJXII[7].style.height = '150%'
+        findAJXII[7].style.width = "150%"
     }
 }
 
