@@ -11,15 +11,22 @@ function seeDetails() {
 
 let getName1 = document.querySelector("#name1");
 console.log(getName1)
-getName1.addEventListener("mouseleave", showHideName1);
+getName1.addEventListener("mouseover", showName1);
+getName1.addEventListener("mouseleave", hideName1);
 let getDesc = document.querySelector("#descrip1")
 getName1.appendChild(getDesc)
 
-function showHideName1() {
-    if (getDesc.style.display === "block") {
-        getDesc.style.display = "none"
+function showName1() {
+    if (getDesc.style.display === "none") {
+        getDesc.style.display = "block"
     } else {
         getDesc.style.display = "block"
+    }
+}
+
+function hideName1() {
+    if (getDesc.style.display === "block") {
+        getDesc.style.display = "none"
     }
 }
 
@@ -131,9 +138,8 @@ findAJXII[7].addEventListener("click", enlargePic);
 // console.log(findAJXII[7].style.display.textContent)
 
 function enlargePic() {
-    console.log("hi")
-    findAJXII[7].style.height = 
-    findAJXII[7].style.width = 
+    while(true) {
+    }
 }
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
